@@ -1,6 +1,5 @@
-# Breathe
+# Inhale. Hold. Exhale.
 
-Inhale. Hold. Exhale.  
 A small tool for calm deep and measured breathing otherwise known as 4-7-8 breathing.  
 Practiced as a meditation excercise.  
 
