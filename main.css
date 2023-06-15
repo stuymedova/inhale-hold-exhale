@@ -23,4 +23,5 @@ body {
   height: 100px;
   border-radius: 100%;
   background-color: black;
+  will-change: scale;
 }
