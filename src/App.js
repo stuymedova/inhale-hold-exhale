@@ -6,9 +6,6 @@ export default class App {
   holdDuration = 7; // in sec
   exhaleDuration = 8; // in sec
 
-  canVibrate = Boolean(navigator.vibrate);
-  vibrationDuration = 400; // in msec
-
   constructor() {
     const states = {
       inhaling: 'holding',
@@ -27,24 +24,15 @@ export default class App {
     let timeoutTime = 0;
 
     if (currentState === 'inhaling') {
-      if (this.canVibrate) {
-        navigator.vibrate(this.vibrationDuration);
-      }
       indicator.expand(this.inhaleDuration);
       timeoutTime = this.inhaleDuration;
     }
 
     if (currentState === 'holding') {
-      if (this.canVibrate) {
-        navigator.vibrate(this.vibrationDuration);
-      }
       timeoutTime = this.holdDuration;
     }
 
     if (currentState === 'exhaling') {
-      if (this.canVibrate) {
-        navigator.vibrate([this.vibrationDuration, this.vibrationDuration]);
-      }
       indicator.contract(this.exhaleDuration);
       timeoutTime = this.exhaleDuration;
     }
